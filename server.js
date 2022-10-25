@@ -40,7 +40,8 @@ app.put("/:id", (req, res) => {
 
 // CREATE
 app.post("/", (req, res) => {
-    res.send("Create")
+    Pokemon.push(req.body)
+    res.redirect("/")
 })
 
 // EDIT
