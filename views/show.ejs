@@ -5,10 +5,10 @@
   </head>
   <body>
     <nav>
-        <a href="/pokemon/new">Add a Pokemon</a>
+        <a href="/new">Add a Pokemon</a>
     </nav>
     <h1>Pokemon Manager</h1>
-    <h2> <%=data.name %> </h2>
+    <h2> <%= data.name %> </h2>
     <img src=" <%= data.img %>" /><br>
     <ul><strong>Type</strong>
         <li><%= data.type[0] %></li>
@@ -24,7 +24,7 @@
         <li>speed: <%= data.stats.speed %> <br></li>
     </ul>
           
-          <a href="/<%= data._id%>/edit">Edit  </a><a>  Delete</a>
+          <a href="/edit">Edit  </a><a>  Delete</a>
         </li>
     </ul>
   </body>

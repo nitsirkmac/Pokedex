@@ -25,27 +25,27 @@ app.get('/', (req, res) => {
 
 // NEW
 app.get("/new", (req, res) => {
-    res.send("New Pokemon")
+    res.render("new.ejs")
 })
 
 // DELETE
-app.delete("/pokemon/:id", (req, res) => {
+app.delete("/:id", (req, res) => {
     res.send("Destroy")
 })
 
 // UPDATE
-app.put("/pokemon/:id", (req, res) => {
+app.put("/:id", (req, res) => {
     res.send("Update")
 })
 
 // CREATE
-app.post("/pokemon", (req, res) => {
+app.post("/", (req, res) => {
     res.send("Create")
 })
 
 // EDIT
 app.get("/:id/edit", (req, res) => {
-    res.send("Edit Pokemon")
+    res.render("edit.ejs")
 })
 
 // SHOW
