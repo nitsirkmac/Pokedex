@@ -9,6 +9,7 @@ const PORT = process.env.PORT
 
 // DATABASE CONNECTION
 
+
 // MIDDLEWARE
 app.use(express.urlencoded({extended: true}))
 
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
 })
 
 // NEW
-app.get("/pokemon/new", (req, res) => {
+app.get("/new", (req, res) => {
     res.send("New Pokemon")
 })
 
@@ -43,7 +44,7 @@ app.post("/pokemon", (req, res) => {
 })
 
 // EDIT
-app.get("/pokemon/:id/edit", (req, res) => {
+app.get("/:id/edit", (req, res) => {
     res.send("Edit Pokemon")
 })
 

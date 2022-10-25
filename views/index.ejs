@@ -5,17 +5,18 @@
   </head>
   <body>
     <nav>
-        <a href="/pokemon/new">Add a Pokemon</a>
+        <a href="/new">Add a Pokemon</a>
     </nav>
     <h1>Pokemon Manager</h1>
     <ul>
-      <% data.forEach(data => { %>
+      
+      <%  for(let i = 0; i < data.length; i++) { %>
         <li>
-          <a href="/pokemon/<%=data.id%>"> <%=data.name %></a><br>
-          <img src=" <%= data.img %>" /><br>
-          <a>Edit  </a><a>  Delete</a>
+          <h3><a href="/<%=i%>"> <%=data[i].name %></a></h3><br>
+          <img src=" <%= data[i].img %>" /><br>
+          <a href="/<%=data[i]%>/edit">Edit  </a><a>  Delete</a>
         </li>
-      <% }) %>
+      <% } %>
     </ul>
   </body>
 </html>

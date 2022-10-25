@@ -8,23 +8,23 @@
         <a href="/pokemon/new">Add a Pokemon</a>
     </nav>
     <h1>Pokemon Manager</h1>
-    <h2> <%= data.name %> </h2>
+    <h2> <%=data.name %> </h2>
     <img src=" <%= data.img %>" /><br>
-    <ul>Type
+    <ul><strong>Type</strong>
         <li><%= data.type[0] %></li>
         <li><%= data.type[1] %></li>
         <li><%= data.type[2] %></li>
     </ul>
-        <ul>Stats
-        <li>hp: <%= data.stats[0] %> <br></li>
-        <li>attack: <%= data.stats[1] %> <br></li>
-        <li>defense: <%= data.stats[2] %> <br></li>
-        <li>spattack: <%= data.stats[3] %> <br></li>
-        <li>spdefense: <%= data.stats[4] %> <br></li>
-        <li>speed: <%= data.stats[5] %> <br></li>
+        <ul><strong>Statistics</strong>
+        <li>hp: <%= data.stats.hp %> <br></li>
+        <li>attack: <%= data.stats.attack %> <br></li>
+        <li>defense: <%= data.stats.defense %> <br></li>
+        <li>spattack: <%= data.stats.spattack %> <br></li>
+        <li>spdefense: <%= data.stats.spdefense %> <br></li>
+        <li>speed: <%= data.stats.speed %> <br></li>
     </ul>
           
-          <a>Edit  </a><a>  Delete</a>
+          <a href="/<%= data._id%>/edit">Edit  </a><a>  Delete</a>
         </li>
     </ul>
   </body>
