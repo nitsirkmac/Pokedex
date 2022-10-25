@@ -40,7 +40,21 @@ app.put("/:id", (req, res) => {
 
 // CREATE
 app.post("/", (req, res) => {
-    Pokemon.push(req.body)
+    let stats = {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed,
+    }
+    let createdPokemon = {
+        name: req.body.name,
+        type: req.body.type,
+        img: req.body.img,
+        stats: stats,
+    }
+    Pokemon.push(createdPokemon)
     res.redirect("/")
 })
 
