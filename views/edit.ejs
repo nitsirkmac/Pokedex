@@ -8,7 +8,7 @@
         <a href="/new">Add a Pokemon</a>
     </nav>
     <h1>Update A Pokemon</h1>
-    <form action="/" method="PUT">
+    <form action="/<%index%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=updatedPokemon.name%>" /><br>
         Type: <input type="text" name="type" value="<%=updatedPokemon.type%>"/><br>
         Hit Points: <input type="number" name="hp" value="<%=updatedPokemon.hp%>"/><br>
@@ -18,7 +18,7 @@
         Special Defense: <input type="number" name="spdefense" value="<%=updatedPokemon.spdefense%>"/><br>
         Speed: <input type="number" name="speed" value="<%=updatedPokemon.speed%>"/><br>
         Image: <input type="text" name="img" value="<%=updatedPokemon.img%>"/><br>
-        <input type="submit" value="Update Pokemon" />
+        <a href="/" ><input type="submit" value="Update Pokemon" /></a>
 
     </form>
     

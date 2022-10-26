@@ -35,7 +35,8 @@ app.delete("/:id", (req, res) => {
 
 // UPDATE
 app.put("/:id", (req, res) => {
-    res.send("Update")
+    Pokemon[req.params.id] = req.body
+    res.redirect("/")
 })
 
 // CREATE
@@ -75,7 +76,8 @@ app.get("/:id/edit", (req, res) => {
         stats: stats,
     }
     res.render("edit.ejs", {
-        updatedPokemon: Pokemon[req.params.id]
+        updatedPokemon: Pokemon[req.params.id],
+        index: req.params.id
     })
 })
 
