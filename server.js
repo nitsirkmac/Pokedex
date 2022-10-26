@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const Pokemon = require('./models/pokemon.js');
+const methodOverride = require("method-override");
 
 //Pulls environment variables into server.js from .env
 require('dotenv').config();
@@ -12,6 +13,7 @@ const PORT = process.env.PORT
 
 // MIDDLEWARE
 app.use(express.urlencoded({extended: true}))
+app.use(methodOverride("_method"))
 
 // I N D U C E S
 
@@ -30,7 +32,8 @@ app.get("/new", (req, res) => {
 
 // DELETE
 app.delete("/:id", (req, res) => {
-    res.send("Destroy")
+    Pokemon.splice(req.params.id, 1);
+    res.redirect("/")
 })
 
 // UPDATE
