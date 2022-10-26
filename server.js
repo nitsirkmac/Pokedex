@@ -60,15 +60,34 @@ app.post("/", (req, res) => {
 
 // EDIT
 app.get("/:id/edit", (req, res) => {
-    res.render("edit.ejs")
+    let stats = {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed,
+    }
+    let updatedPokemon = {
+        name: req.body.name,
+        type: req.body.type,
+        img: req.body.img,
+        stats: stats,
+    }
+    res.render("edit.ejs", {
+        updatedPokemon: Pokemon[req.params.id]
+    })
 })
 
 // SHOW
 app.get('/:id', (req, res) => {
     // res.send("Show Page")
     res.render('show.ejs', {
-        data: Pokemon[req.params.id] })
+        data: Pokemon[req.params.id],
+        index: req.params.id
     })
+})
+
 
 
 // LISTENER

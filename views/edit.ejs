@@ -7,18 +7,18 @@
     <nav>
         <a href="/new">Add a Pokemon</a>
     </nav>
-    <h1>Add A New Pokemon</h1>
-    <form action="/" method="POST">
-        Name: <input type="text" name="name" value="<%=" /><br>
-        Type: <input type="text" name="type" /><br>
-        Hit Points: <input type="number" name="hp" /><br>
-        Attack: <input type="number" name="attack" /><br>
-        Defense: <input type="number" name="defense" /><br>
-        Special Attack: <input type="number" name="spattack" /><br>
-        Special Defense: <input type="number" name="spdefense" /><br>
-        Speed: <input type="number" name="speed" /><br>
-        Image: <input type="text" name="img" /><br>
-        <input type="submit" value="Add New Pokemon" />
+    <h1>Update A Pokemon</h1>
+    <form action="/" method="PUT">
+        Name: <input type="text" name="name" value="<%=updatedPokemon.name%>" /><br>
+        Type: <input type="text" name="type" value="<%=updatedPokemon.type%>"/><br>
+        Hit Points: <input type="number" name="hp" value="<%=updatedPokemon.hp%>"/><br>
+        Attack: <input type="number" name="attack" value="<%=updatedPokemon.attack%>"/><br>
+        Defense: <input type="number" name="defense" value="<%=updatedPokemon.defense%>"/><br>
+        Special Attack: <input type="number" name="spattack" value="<%=updatedPokemon.spattack%>"/><br>
+        Special Defense: <input type="number" name="spdefense" value="<%=updatedPokemon.spdefense%>"/><br>
+        Speed: <input type="number" name="speed" value="<%=updatedPokemon.speed%>"/><br>
+        Image: <input type="text" name="img" value="<%=updatedPokemon.img%>"/><br>
+        <input type="submit" value="Update Pokemon" />
 
     </form>
     

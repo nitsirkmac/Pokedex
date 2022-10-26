@@ -12,8 +12,8 @@
       
       <%  for(let i = 0; i < data.length; i++) { %>
         <li>
-          <h3><a href="/<%=i%>"> <%=data[i].name %></a></h3><br>
-          <img src=" <%= data[i].img %>" /><br>
+          <h3> <%=data[i].name %></h3><br>
+          <a href="/<%=i%>"><img src=" <%= data[i].img %>" /></a><br>
           <a href="/<%=i%>/edit">Edit  </a><a>  Delete</a>
         </li>
       <% } %>
