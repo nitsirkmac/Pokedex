@@ -5,9 +5,9 @@
   </head>
   <body>
     <nav>
+        <h1>Update A Pokemon</h1>
         <a href="/new">Add a Pokemon</a>
     </nav>
-    <h1>Update A Pokemon</h1>
     <form action="/<%index%>?_method=PUT" method="POST">
         Name: <input type="text" name="name" value="<%=updatedPokemon.name%>" /><br>
         Type: <input type="text" name="type" value="<%=updatedPokemon.type%>"/><br>

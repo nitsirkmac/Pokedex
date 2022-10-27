@@ -14,6 +14,7 @@ const PORT = process.env.PORT
 // MIDDLEWARE
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride("_method"))
+app.use(express.static('public'))
 
 // I N D U C E S
 

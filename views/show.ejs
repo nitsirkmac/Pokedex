@@ -4,28 +4,43 @@
     <%- include('./partials/head.ejs')%>
   </head>
   <body>
+    <section id="show-page">
     <nav>
-        <a href="/new">Add a Pokemon</a>
+      <h1>Pokemon Manager</h1>
+      <a href="/new">Add a Pokemon</a>
     </nav>
-    <h1>Pokemon Manager</h1>
+    
     <h2> <%=data.name %> </h2>
-    <img src=" <%= data.img %>" /><br>
-    <ul><strong>Type</strong>
-        <li><%= data.type[0] %></li>
-        <li><%= data.type[1] %></li>
-        <li><%= data.type[2] %></li>
-    </ul>
-        <ul><strong>Statistics</strong>
-        <li>hp: <%= data.stats.hp %> <br></li>
-        <li>attack: <%= data.stats.attack %> <br></li>
-        <li>defense: <%= data.stats.defense %> <br></li>
-        <li>spattack: <%= data.stats.spattack %> <br></li>
-        <li>spdefense: <%= data.stats.spdefense %> <br></li>
-        <li>speed: <%= data.stats.speed %> <br></li>
-    </ul>
-          
-          <a href="/<%=index%>/edit">Edit  </a><a>  Delete</a>
-        </li>
-    </ul>
+       <section id="show-content">
+        <aside class="show">
+          <img src=" <%= data.img %>" />
+        </aside>
+        <main class="show">
+          <ul><strong>Type</strong>
+            <li><%= data.type[0] %></li>
+            <li><%= data.type[1] %></li>
+            <li><%= data.type[2] %></li>
+          </ul>
+          <ul><strong>Statistics</strong>
+            <li>hp: <%= data.stats.hp %> <br></li>
+            <li>attack: <%= data.stats.attack %> <br></li>
+            <li>defense: <%= data.stats.defense %> <br></li>
+            <li>spattack: <%= data.stats.spattack %> <br></li>
+            <li>spdefense: <%= data.stats.spdefense %> <br></li>
+            <li>speed: <%= data.stats.speed %> <br></li>
+          </ul>
+        </main>
+       </section>
+       <footer class="show-footer">
+          <form action="/<%=index%>/edit" method="GET">
+            <input type="submit" value="EDIT" />
+          </form>
+          <form action="/<%=index%>?_method=DELETE" method="POST">
+            <input type="submit"  value="DELETE" />
+          </form>
+        </footer>
+    </section>     
   </body>
 </html>
+
+
